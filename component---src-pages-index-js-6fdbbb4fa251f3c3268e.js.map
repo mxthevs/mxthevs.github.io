@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/pages/index.js"],"names":[],"mappings":"2FAAA,gCAEe,4BAAM","file":"component---src-pages-index-js-6fdbbb4fa251f3c3268e.js","sourcesContent":["import React from \"react\"\r\n\r\nexport default () => <div>Hello world!</div>\r\n"],"sourceRoot":""}
