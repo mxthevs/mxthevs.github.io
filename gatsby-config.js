@@ -1,21 +1,32 @@
+const path = require(`path`);
 const siteMetadata = require('./config/siteMetadata');
 
 module.exports = {
   siteMetadata,
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `assets`, 'img'),
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-155018094-1",
+        head: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#6441A5`,
         showSpinner: false,
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "UA-155018094-1",
       },
     },
     {

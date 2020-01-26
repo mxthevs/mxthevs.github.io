@@ -8,6 +8,18 @@ module.exports = {
     `ReactJS`,
     `NodeJS`
   ],
+  social: [
+    {
+      name: `github`,
+      url: `https://github.com/mxthevs`,
+      iconName: 'FaGithub',
+    },
+    {
+      name: `instagram`,
+      url: `https://www.instagram.com/mxthevs_/`,
+      iconName: 'FaInstagram',
+    }
+  ],
   externalLinks: [
     {
       name: 'ETEC Cafelândia',
