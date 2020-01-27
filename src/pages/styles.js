@@ -145,9 +145,9 @@ export const Section = styled.section`
     text-align-last: center;
 
     a {
-      text-decoration: none;
+      text-decoration: none;  
       font-weight: bold;
-      color: ${props => props.theme.primary};
+      color: ${props => lighten(0.06, props.theme.primary)};
     }
 
     span {
@@ -164,7 +164,7 @@ export const Section = styled.section`
     }
 
     .css {
-      color: #016DB5;
+      color: ${lighten(0.09, '#016DB5')};
     }
 
     .javascript {
@@ -172,7 +172,7 @@ export const Section = styled.section`
     }
 
     .react-js {
-      color: #3b5998;
+      color: ${lighten(0.16, '#3b5998')};
     }
 
     .react-native {
@@ -204,6 +204,10 @@ export const Section = styled.section`
       display: flex;
       flex-direction: column;
       width: 100%;
+
+      label {
+        color: ${props => darken(0.1, props.theme.textColor)};
+      }
 
       textarea {
         resize: none;
@@ -284,7 +288,7 @@ export const Section = styled.section`
     margin-top: 20px;
     font-size: 12px;
     text-align: center;
-    color: ${props => darken(0.3,props.theme.textColor)};
+    color: ${props => darken(0.2,props.theme.textColor)};
 
     .social-icons {
       margin-top: 10px;

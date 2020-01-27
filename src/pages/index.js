@@ -135,7 +135,7 @@ export default ({ data }) => {
               <span>Você também pode me encontrar aqui: </span>
               <div className="social-icons">
               {icons && social.map((social, index) => (
-                <a key={index} href={social.url}>
+                <a key={index} href={social.url} aria-label={social.name}>
                   <Icon 
                     component={icons[social.iconName]} 
                     size={24} 

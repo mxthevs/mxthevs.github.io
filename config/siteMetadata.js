@@ -10,12 +10,12 @@ module.exports = {
   ],
   social: [
     {
-      name: `github`,
+      name: `Github`,
       url: `https://github.com/mxthevs`,
       iconName: 'FaGithub',
     },
     {
-      name: `instagram`,
+      name: `Instagram`,
       url: `https://www.instagram.com/mxthevs_/`,
       iconName: 'FaInstagram',
     }
