@@ -8,6 +8,38 @@ module.exports = {
     `ReactJS`,
     `NodeJS`
   ],
+  techs: [
+    {
+      name: `HTML`,
+      iconName: `FaHtml5`,
+      color: `#e34f26`,
+    },
+    {
+      name: `CSS`,
+      iconName: `FaCss3Alt`,
+      color: `#016DB5`,
+    },
+    {
+      name: `JavaScript`,
+      iconName: `FaJs`,
+      color: `#f7df1e`,
+    },
+    {
+      name: `Node.js`,
+      iconName: `FaNodeJs`,
+      color: `#6cc24a`,
+    },
+    {
+      name: `ReactJS`,
+      iconName: `FaReact`,
+      color: `#3b5998`,
+    },
+    {
+      name: `Git`,
+      iconName: `FaGitAlt`,
+      color: `#F05033`,
+    }
+  ],
   social: [
     {
       name: `Github`,

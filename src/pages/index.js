@@ -19,13 +19,25 @@ import Icon from '../components/Icon';
 import { Container, Header, Main, Section } from './styles';
 import theme from '../styles/themes/dark';
 
-import { externalLinks, social  } from '../../config/siteMetadata';
+import { externalLinks, techs, social  } from '../../config/siteMetadata';
 
 export default ({ data }) => {
-  const [icons, setIcons] = useState(null);
+  const [techIcons, setTechIcons] = useState(null);
+  const [socialIcons, setSocialIcons] = useState(null);
 
   useEffect(() => {
-    setIcons({
+    setTechIcons({
+      FaHtml5, 
+      FaCss3Alt, 
+      FaJs, 
+      FaNodeJs,
+      FaReact,
+      FaGitAlt,
+    });
+  }, [])
+
+  useEffect(() => {
+    setSocialIcons({
       FaGithub,
       FaInstagram,
     });
@@ -78,12 +90,15 @@ export default ({ data }) => {
           <Section>
             <h2>O que sei</h2>
             <div className="tech-logos">
-              <FaHtml5 size={36} />
-              <FaCss3Alt size={36} />
-              <FaJs size={36} />
-              <FaReact size={36} />
-              <FaNodeJs size={36} />
-              <FaGitAlt size={36} />
+              {techIcons && techs.map((tech, index) => (
+                <Icon
+                  key={index} 
+                  component={techIcons[tech.iconName]}
+                  size={36}
+                  color={theme.textColor}
+                  hoverColor={tech.color}
+                />
+              ))}
             </div>
             <p>
               Dedico meu tempo livre para estudar as tecnologias de desenvolvimento
@@ -134,10 +149,10 @@ export default ({ data }) => {
             <div className="social">
               <span>Você também pode me encontrar aqui: </span>
               <div className="social-icons">
-              {icons && social.map((social, index) => (
+              {socialIcons && social.map((social, index) => (
                 <a key={index} href={social.url} aria-label={social.name}>
                   <Icon 
-                    component={icons[social.iconName]} 
+                    component={socialIcons[social.iconName]} 
                     size={24} 
                     color={theme.primary}
                   />
