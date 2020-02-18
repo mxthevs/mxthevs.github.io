@@ -47,7 +47,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Matheus Henrique - DEV`,
+        name: `Matheus - DEV`,
         short_name: `MXTHVS`,
         start_url: `/`,
         background_color: `#121212`,

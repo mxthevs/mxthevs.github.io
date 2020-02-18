@@ -49,7 +49,7 @@ export default ({ data }) => {
       <Container>
         <Header>
           <Img 
-            fluid={data.file.childImageSharp.fluid}
+            fluid={data.avatar.childImageSharp.fluid}
             style={{ width: 200}}
             alt="Matheus Henrique"
           />
@@ -113,7 +113,7 @@ export default ({ data }) => {
             <p>
               Para integrar as aplicações, estudo também técnicas de desenvolvimento para banco de dados <strong>relacionais</strong> e <strong>não relacionais</strong>.
               Além disso, também possuo conhecimento em versionamento de código, utilizando <span className="git">Git</span>.
-            </p>      
+            </p>
           </Section>
 
           <Section>
@@ -170,7 +170,7 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "me.jpg" }) {
+    avatar: file(relativePath: { eq: "me.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 200, quality: 100) {
           ...GatsbyImageSharpFluid_withWebp
