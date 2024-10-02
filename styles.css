@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background-color: #161617;
+  background-color: #121212;
   color: #eeeeee;
 }
 
@@ -75,4 +75,20 @@ a:hover {
 .output {
   margin-left: 3px;
   margin-top: -15px;
+}
+
+.typescript {
+  color: #3178c6;
+}
+
+.react {
+  color: #61dafb;
+}
+
+.rust {
+  color: #dea584;
+}
+
+.ocaml {
+  color: #c24f1d;
 }
