@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #161617;
+  color: #eeeeee;
+}
+
+pre {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  pre {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  pre {
+    font-size: 1rem;
+  }
+}
+
+a {
+  color: #61afef;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tty {
+  font-family: "Fira Code", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.brackets {
+  color: #e06c75;
+}
+
+.user {
+  color: #e5c07b;
+}
+
+.at {
+  color: #56b6c2;
+}
+
+.device,
+.command {
+  color: #98c379;
+}
+
+.location,
+.arg {
+  color: #c678dd;
+}
+
+.arg {
+  text-decoration: underline;
+}
+
+.output {
+  margin-left: 3px;
+  margin-top: -15px;
+}
