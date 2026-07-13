@@ -140,8 +140,8 @@ export default function Navbar() {
                 className="flex items-center gap-1.5 rounded-full border border-white/5 bg-white/[0.02] px-3.5 py-1.5 text-xs font-medium text-zinc-300 transition-all duration-300 hover:bg-white/5 hover:border-white/10 active:scale-95 cursor-pointer"
                 aria-label="Select language"
               >
-                <span>{languages.find(l => l.code === (i18n.language === "pt" ? "pt" : "en"))?.emoji}</span>
-                <span className="text-zinc-300">{languages.find(l => l.code === (i18n.language === "pt" ? "pt" : "en"))?.native}</span>
+                <span>{languages.find(l => l.code === (i18n.language?.startsWith("pt") ? "pt" : "en"))?.emoji}</span>
+                <span className="text-zinc-300">{languages.find(l => l.code === (i18n.language?.startsWith("pt") ? "pt" : "en"))?.native}</span>
                 <ChevronDown className={`h-3 w-3 text-zinc-500 transition-transform duration-300 ${langDropdownOpen ? "rotate-180" : ""}`} />
               </button>
 
@@ -160,7 +160,7 @@ export default function Navbar() {
                       className="absolute right-0 mt-2 w-36 z-50 rounded-xl border border-white/10 bg-black/95 p-1.5 backdrop-blur-2xl shadow-2xl"
                     >
                       {languages.map((lang) => {
-                        const isSelected = i18n.language === lang.code || (lang.code === "en" && !["en", "pt"].includes(i18n.language));
+                        const isSelected = (lang.code === "pt" && i18n.language?.startsWith("pt")) || (lang.code === "en" && !i18n.language?.startsWith("pt"));
                         return (
                           <button
                             key={lang.code}
@@ -246,7 +246,7 @@ export default function Navbar() {
                 </span>
                 <div className="flex items-center gap-2">
                   {languages.map((lang) => {
-                    const isSelected = i18n.language === lang.code || (lang.code === "en" && !["en", "pt"].includes(i18n.language));
+                    const isSelected = (lang.code === "pt" && i18n.language?.startsWith("pt")) || (lang.code === "en" && !i18n.language?.startsWith("pt"));
                     return (
                       <button
                         key={lang.code}
