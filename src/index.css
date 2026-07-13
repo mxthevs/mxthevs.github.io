@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  
+  --color-brand: #ffffff;
+  --color-bg: #09090B;
+  --color-secondary: #111113;
+  --color-surface: #18181B;
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-glass-hover: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #09090B;
+    color: #A1A1AA;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Custom elegant dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #09090B;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #1f1f23;
+    border-radius: 3px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2d2d34;
+  }
+
+  /* Selection style matching Dark Luxury theme */
+  ::selection {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  /* Focus states */
+  *:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+  }
+}
+
+/* Background Grid matching Dark Luxury theme */
+.glow-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.03) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+/* Premium Noise Overlay matching Dark Luxury theme */
+.noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  mix-blend-mode: soft-light;
+}
+
+/* Animated glow blobs matching Dark Luxury theme */
+.glow-blob {
+  filter: blur(120px);
+  will-change: transform;
+}
